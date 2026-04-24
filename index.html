@@ -480,7 +480,7 @@
   .meg-slide.active .meg-slide-title,
   .meg-slide.active .meg-slide-desc,
   .meg-slide.active .meg-btn-quote {
-    animation: fadeUp 0.7s both;
+    animation: fadeUp 0.9s both;
   }
 
   .meg-slide.active .meg-slide-eyebrow { animation-delay: 0.15s; }
@@ -565,8 +565,8 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 3px;
-    background: #c8a96e;
+    height: 7px;
+    background: linear-gradient(135deg, rgb(29, 101, 60) 0%, rgb(7, 77, 37));
     width: 0%;
     z-index: 4;
   }
@@ -705,7 +705,7 @@ function goTo(index) {
   progress.style.transition = 'none';
   progress.style.width = '0%';
   void progress.offsetWidth; // force reflow
-  progress.style.transition = 'width 5s linear';
+  progress.style.transition = 'width 7s linear';
   progress.style.width = ((current + 1) / TOTAL * 100) + '%';
 }
 
