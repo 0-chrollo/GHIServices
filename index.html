@@ -734,6 +734,177 @@ startAuto();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+
+ 
+  /* ── ABOUT SECTION ── */
+  .about {
+    padding: 30px 23px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .about-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8b5e1a;
+    margin-bottom: 24px;
+  }
+
+ 
+
+  .about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 7vw, 48px);
+    line-height: 1.15;
+    color: #1a1208;
+    margin-bottom: 20px;
+  }
+
+  .about h2 span {
+    color: rgb(18, 100, 53) ;
+  }
+
+  .about p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #4a3f32;
+    margin-bottom: 40px;
+  }
+
+  /* ── SERVICE PILLS ── */
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid #c4c4c440;
+  }
+
+  .service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid #c4c4c440;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1208;
+  }
+
+  .service-item .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #135105;
+    flex-shrink: 0;
+  }
+
+  /* ── CTA BUTTON ── */
+  .about-cta {
+    margin-top: 40px;
+  }
+
+  .about-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgb(20, 75, 44) 0%, rgb(4, 52, 25));
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 14px 20px;
+    transition: background 0.2s;
+    border-radius: 30px;
+  }
+
+  .about-cta a:hover {
+    background: #6e4a13;
+  }
+
+  .about-cta a::after {
+    content: '→';
+    font-size: 16px;
+  }
+</style>
+
+
+<section class="about">
+
+
+
+  <h2>Gauteng's <span>Thatch & Roofing</span> Specialists</h2>
+
+  <p>
+    Kreig Renovations has been delivering expert roofing solutions across Gauteng — from new thatch constructions to full roof conversions, fire protection systems, and lightning conductor installations. Every completed contract is backed by our after-sales commitment and extended guarantee option.
+  </p>
+
+  <div class="service-list">
+    <div class="service-item">
+      <span>New Thatch Roof Construction</span>
+      <div class="dot"></div>
+    </div>
+    <div class="service-item">
+      <span>Thatch Roof Conversions</span>
+      <div class="dot"></div>
+    </div>
+    <div class="service-item">
+      <span>Fire Protection & Drencher Systems</span>
+      <div class="dot"></div>
+    </div>
+    <div class="service-item">
+      <span>Lightning Conductor Installation & Certification</span>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+  <div class="about-cta">
+    <a href="services.html">Explore All Services</a>
+  </div>
+
+</section>
+
+
+
+
+
 <script src="scripts.js"></script>
 </body>
 </html>
