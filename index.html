@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thee Fellars</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lato:wght@700&display=swap" rel="stylesheet">
 <style>
   *{ 
@@ -761,33 +762,18 @@ startAuto();
 
 
 
-
-
 <style>
-
-
-
- 
-  /* ── ABOUT SECTION ── */
   .about {
     padding: 30px 23px;
-    max-width: 680px;
+    max-width: 1100px;
     margin: 0 auto;
   }
 
-  .about-label {
+  .about-inner {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #8b5e1a;
-    margin-bottom: 24px;
+    flex-direction: column;
+    gap: 32px;
   }
-
- 
 
   .about h2 {
     font-family: 'Playfair Display', serif;
@@ -798,17 +784,15 @@ startAuto();
   }
 
   .about h2 span {
-    color: rgb(18, 100, 53) ;
+    color: rgb(18, 100, 53);
   }
 
   .about p {
     font-size: 16px;
     line-height: 1.75;
     color: #4a3f32;
-    margin-bottom: 40px;
   }
 
-  /* ── SERVICE PILLS ── */
   .service-list {
     display: flex;
     flex-direction: column;
@@ -835,9 +819,8 @@ startAuto();
     flex-shrink: 0;
   }
 
-  /* ── CTA BUTTON ── */
   .about-cta {
-    margin-top: 40px;
+    margin-top: 32px;
   }
 
   .about-cta a {
@@ -863,43 +846,345 @@ startAuto();
     content: '→';
     font-size: 16px;
   }
+
+  /* ── DESKTOP: two columns ── */
+  @media (min-width: 768px) {
+    .about {
+      padding: 80px 40px;
+    }
+
+    .about-inner {
+      flex-direction: row;
+      gap: 80px;
+      align-items: flex-start;
+    }
+
+    .about-left {
+      flex: 1;
+      position: sticky;
+      top: 40px;
+    }
+
+    .about-right {
+      flex: 1;
+    }
+  }
+</style>
+
+<section class="about">
+  <div class="about-inner">
+
+    <div class="about-left">
+      <h2>Gauteng's <span>Thatch & Roofing</span> Specialists</h2>
+      <p>
+        Kreig Renovations has been delivering expert roofing solutions across Gauteng — from new thatch constructions to full roof conversions, fire protection systems, and lightning conductor installations. Every completed contract is backed by our after-sales commitment and extended guarantee option.
+      </p>
+    </div>
+
+    <div class="about-right">
+      <div class="service-list">
+        <div class="service-item">
+          <span>New Thatch Roof Construction</span>
+          <div class="dot"></div>
+        </div>
+        <div class="service-item">
+          <span>Thatch Roof Conversions</span>
+          <div class="dot"></div>
+        </div>
+        <div class="service-item">
+          <span>Fire Protection & Drencher Systems</span>
+          <div class="dot"></div>
+        </div>
+        <div class="service-item">
+          <span>Lightning Conductor Installation & Certification</span>
+          <div class="dot"></div>
+        </div>
+      </div>
+
+      <div class="about-cta">
+        <a href="services.html">Explore All Services</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<style>
+
+
+  .why {
+    background: rgb(14, 73, 38);
+    padding: 70px 23px;
+  }
+
+  .why-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ── LABEL ── */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 16px;
+  }
+
+
+
+  /* ── HEADING ── */
+  .why h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 6vw, 42px);
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 56px;
+    max-width: 520px;
+  }
+
+  /* ── POINTS ── */
+  .why-points {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 64px;
+  }
+
+  .why-point {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.068);
+  }
+
+  .why-point:first-child {
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .why-point-number {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.08em;
+    margin-top: 3px;
+    flex-shrink: 0;
+    width: 24px;
+  }
+
+  .why-point-text h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .why-point-text p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* ── VIDEO DIVIDER ── */
+  .video-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .video-divider span {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.677);
+    white-space: nowrap;
+  }
+
+  .video-divider::before,
+  .video-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+  
+  }
+
+  /* ── VIDEOS ── */
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .video-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: rgba(0,0,0,0.3);
+  }
+
+  .video-wrap video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 54, 28, 0.82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+
+  .video-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .play-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .video-overlay:hover .play-btn {
+    border-color: #fff;
+    transform: scale(1.08);
+  }
+
+  .play-btn i {
+    font-size: 22px;
+    color: #fff;
+    line-height: 1;
+  }
+
+  /* ── DESKTOP ── */
+  @media (min-width: 768px) {
+    .why {
+      padding: 90px 40px;
+    }
+
+    .why-points {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 80px;
+    }
+
+    .why-point:nth-child(1),
+    .why-point:nth-child(2) {
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .video-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 </style>
 
 
-<section class="about">
+<section class="why">
+  <div class="why-inner">
 
+    <div class="section-label">Why Choose Us</div>
+    <h2>Roofing Done Right, Backed by Experience</h2>
 
+    <div class="why-points">
 
-  <h2>Gauteng's <span>Thatch & Roofing</span> Specialists</h2>
+      <div class="why-point">
+        <span class="why-point-number">01</span>
+        <div class="why-point-text">
+          <h3>Structural Engineer on Every Design</h3>
+          <p>Every roof design is signed off by a professional structural engineer — not guesswork.</p>
+        </div>
+      </div>
 
-  <p>
-    Kreig Renovations has been delivering expert roofing solutions across Gauteng — from new thatch constructions to full roof conversions, fire protection systems, and lightning conductor installations. Every completed contract is backed by our after-sales commitment and extended guarantee option.
-  </p>
+      <div class="why-point">
+        <span class="why-point-number">02</span>
+        <div class="why-point-text">
+          <h3>Certified Lightning Conductor Installations</h3>
+          <p>We install, service, and certify lightning conductors — giving you documented protection.</p>
+        </div>
+      </div>
 
-  <div class="service-list">
-    <div class="service-item">
-      <span>New Thatch Roof Construction</span>
-      <div class="dot"></div>
+      <div class="why-point">
+        <span class="why-point-number">03</span>
+        <div class="why-point-text">
+          <h3>Class A Fire-Rated Solutions</h3>
+          <p>From drencher systems to Harvey Tiles, our solutions dramatically reduce fire risk on thatch properties.</p>
+        </div>
+      </div>
+
+      <div class="why-point">
+        <span class="why-point-number">04</span>
+        <div class="why-point-text">
+          <h3>After-Sales Warranty Tracking</h3>
+          <p>Every completed job is logged. We contact you before your warranty expires — no chasing required.</p>
+        </div>
+      </div>
+
     </div>
-    <div class="service-item">
-      <span>Thatch Roof Conversions</span>
-      <div class="dot"></div>
+
+    <div class="video-divider">
+      <span>See Our Work in Action</span>
     </div>
-    <div class="service-item">
-      <span>Fire Protection & Drencher Systems</span>
-      <div class="dot"></div>
+
+    <div class="video-grid">
+
+      <div class="video-wrap">
+        <video src="video1.mp4" playsinline></video>
+        <div class="video-overlay">
+          <div class="play-btn">
+            <i class="fa-solid fa-play"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-wrap">
+        <video src="video2.mp4" playsinline></video>
+        <div class="video-overlay">
+          <div class="play-btn">
+            <i class="fa-solid fa-play"></i>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="service-item">
-      <span>Lightning Conductor Installation & Certification</span>
-      <div class="dot"></div>
-    </div>
+
   </div>
-
-  <div class="about-cta">
-    <a href="services.html">Explore All Services</a>
-  </div>
-
 </section>
+
+<script>
+  document.querySelectorAll('.video-overlay').forEach(overlay => {
+    overlay.addEventListener('click', () => {
+      const video = overlay.previousElementSibling;
+      overlay.classList.add('hidden');
+      video.controls = true;
+      video.play();
+    });
+  });
+</script>
+
+
 
 
 
