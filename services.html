@@ -106,6 +106,459 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+
+ 
+    /* ── HEADER ── */
+    .page-header {
+      position: relative;
+      height: 340px;
+      overflow: hidden;
+    }
+
+    /* REPLACE src with client's main roof photo */
+    .page-header img.hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .page-header .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.52);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 36px 28px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(26px, 5vw, 40px);
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      font-size: 15px;
+      color: #ccc;
+    }
+
+    /* ── MAIN ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 50px 24px 80px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #1e5c2f;
+      margin-bottom: 16px;
+    }
+
+    /* ── PLAIN LIST ── */
+    .plain-list {
+      list-style: none;
+      margin-bottom: 56px;
+    }
+
+    .plain-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 0;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 15px;
+    }
+
+    .plain-list li::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #1a1a1a;
+      flex-shrink: 0;
+    }
+
+    /* ── ACCORDION ── */
+    .accordion {
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .accordion-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      text-align: left;
+      gap: 16px;
+    }
+
+    .accordion-toggle .name {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+
+    .accordion-toggle .icon {
+      width: 28px;
+      height: 28px;
+      border: 1.5px solid #1e5c2f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #1e5c2f;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1;
+      transition: background 0.2s, color 0.2s, transform 0.25s;
+      user-select: none;
+    }
+
+    .accordion-item.open .accordion-toggle .icon {
+      background: #1e5c2f;
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .accordion-item.open .accordion-body {
+      max-height: 600px;
+    }
+
+    .accordion-inner {
+      padding: 4px 0 28px;
+    }
+
+    .accordion-inner p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 16px;
+    }
+
+    .accordion-inner ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .accordion-inner ul li {
+      font-size: 14px;
+      color: #1a1a1a;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .accordion-inner ul li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #1a1a1a;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    /* ── CTA ── */
+    .cta {
+      margin-top: 60px;
+      padding: 36px 28px;
+      border: 2px solid #1a1a1a;
+    }
+
+    .cta h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .cta p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #1e5c2f;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 12px 26px;
+      text-decoration: none;
+    }
+
+  </style>
+
+
+  <!-- REPLACE src with client's best roof photo -->
+  <div class="page-header">
+    <img class="hero-img" src="https://picsum.photos/seed/thatchwoof/1200/600" alt="Thatch roofing work by GHI Services"/>
+    <div class="overlay">
+      <h1>Our Services</h1>
+      <p>We install, fix, and upgrade roofs across Gauteng.</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p class="section-title">What We Do</p>
+    <ul class="plain-list">
+      <li>New Thatch Roof Construction</li>
+      <li>Thatch Roof Repairs & Re-thatching</li>
+      <li>Rational Fire Designs on New & Existing Thatch Roofs</li>
+      <li>Design, Supply & Install Custom Built Timber Trusses</li>
+      <li>Roof Design by Our Professional Structural Engineer</li>
+      <li>Thatching Advice, Consultation & Free Quotations</li>
+      <li>Low Cost Thatch Roof Insurance</li>
+      <li>Installation of False Thatch Inner Roof with Tile or IBR Outer Roof</li>
+      <li>Pergolas for Stoep & Veranda Shading</li>
+      <li>Bamboo (Spaanse Riet) Ceilings</li>
+      <li>Wall Paneling Using CCA-Treated Bluegum Laths</li>
+      <li>Suppliers of Treated Poplar Ceiling & Floor Timber</li>
+      <li>Skylights & Roof Windows (Tony Shandell)</li>
+      <li>Maintenance Services & 3-Year Extended Guarantees</li>
+      <li>Drencher Systems</li>
+    </ul>
+
+    <p class="section-title">More Detail</p>
+    <div class="accordion">
+
+      <div class="accordion-item open">
+        <button class="accordion-toggle" aria-expanded="true">
+          <span class="name">Thatch Roof Conversion to Harvey Thatch Tiles</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-inner">
+            <p>Steel-based tiles with a stone-coated finish that looks like thatch — without the fire risk or maintenance. Can be installed directly over existing thatch.</p>
+            <ul>
+              <li>Class A fire rating — reduces lightning risk</li>
+              <li>88% lighter than concrete tiles</li>
+              <li>Weatherproof, pest-proof and insect-resistant</li>
+              <li>Available in multiple natural stone-coated colours</li>
+              <li>Can be applied over old thatch or new structures</li>
+              <li>No re-thatching required ever again</li>
+              <li>20-year warranty included</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-toggle" aria-expanded="false">
+          <span class="name">Thatch Roof Conversion to Chromadek Sheets</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-inner">
+            <p>We convert your thatch to Chromadek or zinc sheeting — either by over-sheeting or full reconstruction, depending on the condition of your existing structure.</p>
+            <ul>
+              <li>Over-sheeting option — no need to vacate the property</li>
+              <li>Full rebuild available — old thatch stripped and structure reinforced</li>
+              <li>New insulation installed to replace thatch's thermal performance</li>
+              <li>Eliminates fire risk and re-thatching costs permanently</li>
+              <li>Zinc and Chromadek last 80–100 years</li>
+              <li>Existing structure used where possible to reduce costs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-toggle" aria-expanded="false">
+          <span class="name">Fire Retardant Treatment — Thatch Marshal 8000</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-inner">
+            <p>A non-toxic, water-based fire retardant applied by high-pressure spray. We are certified applicators — the certificate issued is recognised for insurance purposes.</p>
+            <ul>
+              <li>Slows flame spread significantly</li>
+              <li>Protects against UV, fungi, rot and pests</li>
+              <li>Extends the life of your thatch</li>
+              <li>Safe and non-toxic for residents</li>
+              <li>New thatch: 5-year certificate</li>
+              <li>Old thatch: 4-year certificate</li>
+              <li>Reapplication every 3–5 years recommended</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-toggle" aria-expanded="false">
+          <span class="name">Lightning Conductor Installation, Servicing & Certification</span>
+          <span class="icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="accordion-inner">
+            <p>Full lightning protection systems installed for thatch and tile roofs. All work is certified and compliant, protecting your structure and electrical systems from strikes.</p>
+            <ul>
+              <li>Air terminals placed at all roof high points</li>
+              <li>Copper or aluminium conductor cables</li>
+              <li>Ground rods buried at required depth</li>
+              <li>Surge protection for electrical systems</li>
+              <li>Servicing and maintenance of existing systems</li>
+              <li>Compliance certificate issued on completion</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta">
+      <h3>Not sure what you need?</h3>
+      <p>We offer free consultations and quotes across all of Gauteng.</p>
+      <a href="contact.html">Get a Free Quote</a>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.accordion-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.accordion-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.accordion-item').forEach(function(i) {
+          i.classList.remove('open');
+          i.querySelector('.accordion-toggle').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+    <!-- Top: Brand + Nav Columns -->
+    <div class="footer__top">
+  
+      <!-- Brand -->
+      <div class="footer__brand">
+        <h2>GHI Services</h2>
+        <p>Cape Town's trusted automotive service and repair centre. We diagnose, repair, and maintain your vehicle right.</p>
+        <div class="footer__social">
+  
+          <a href="#" class="footer__social-icon footer__social-icon--facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+  
+     
+  
+          <a href="https://wa.me/27678118395" target="_blank" class="footer__social-icon footer__social-icon--whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+  
+        </div>
+      </div>
+  
+      <!-- Services -->
+      <div class="footer__col">
+        <h4>Services</h4>
+        <a href="#">Vehicle Diagnostics</a>
+        <a href="#">Auto Electrical Repairs</a>
+        <a href="#">General Maintenance</a>
+      </div>
+  
+      <!-- Company -->
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Our Services</a>
+        <a href="#">Contact Us</a>
+      </div>
+  
+      <!-- Contact -->
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <a href="tel:0215562799">021 556 2799</a>
+        <a href="https://wa.me/27678118395" target="_blank">067 811 8395</a>
+        <a href="#">13A Parklands Building, Parklands Main Road, Cape Town</a>
+      </div>
+  
+    </div>
+    <!-- /footer__top -->
+  
+    <!-- Bottom Bar -->
+    <div class="footer__bottom">
+      <div class="footer__bottom-links">
+      </div>
+      <span class="footer__copyright">&copy; 2026 The Auto Vault. All rights reserved. Designed by Unitwebs</span>
+    </div>
+    <!-- /footer__bottom -->
+  
+  </footer>
+  
+
   
 <script src="scripts.js"></script>
 </body>
