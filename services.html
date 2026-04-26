@@ -140,7 +140,7 @@
     /* REPLACE src with client's main roof photo */
     .page-header img.hero-img {
       width: 100%;
-      height: 100%;
+      height: 65%;
       object-fit: cover;
       object-position: center;
       display: block;
@@ -149,7 +149,7 @@
     .page-header .overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.52);
+      background: rgba(11, 11, 11, 0.52);
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -195,15 +195,15 @@
       align-items: center;
       gap: 12px;
       padding: 13px 0;
-      border-bottom: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e8e8e89f;
       font-size: 15px;
     }
 
     .plain-list li::before {
       content: '';
-      width: 7px;
-      height: 7px;
-      background: #1a1a1a;
+      width: 9px;
+      height: 9px;
+      background: #046701;
       flex-shrink: 0;
     }
 
@@ -230,7 +230,7 @@
     }
 
     .accordion-toggle .name {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 500;
       color: #1a1a1a;
     }
@@ -239,21 +239,23 @@
       width: 28px;
       height: 28px;
       border: 1.5px solid #1e5c2f;
+background: #046701;
       display: flex;
+      border-radius: 35px;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      color: #1e5c2f;
-      font-size: 18px;
+      color: #f8f8f8;
+      font-size: 16px;
       font-weight: 400;
-      line-height: 1;
+   
       transition: background 0.2s, color 0.2s, transform 0.25s;
       user-select: none;
     }
 
     .accordion-item.open .accordion-toggle .icon {
-      background: #1e5c2f;
-      color: #fff;
+      background:white;
+      color: #0c2f03;
       transform: rotate(45deg);
     }
 
@@ -305,12 +307,15 @@
 
     /* ── CTA ── */
     .cta {
+        border-radius: 20px;
       margin-top: 60px;
       padding: 36px 28px;
-      border: 2px solid #1a1a1a;
+      background:  rgb(20, 75, 44) ;
+     
     }
 
     .cta h3 {
+        color: #e8e8e8;
       font-size: 20px;
       font-weight: 600;
       margin-bottom: 8px;
@@ -318,17 +323,18 @@
 
     .cta p {
       font-size: 14px;
-      color: #555;
+      color: #c3c3c3;
       margin-bottom: 20px;
     }
 
     .cta a {
       display: inline-block;
-      background: #1e5c2f;
-      color: #fff;
+      background: #ffffff;
+      color: #073d05;
       font-size: 14px;
       font-weight: 500;
       padding: 12px 26px;
+      border-radius: 35px;;
       text-decoration: none;
     }
 
