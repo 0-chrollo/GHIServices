@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thee Fellars</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lato:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="core.css">
+
+
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="brand">
+    <div class="logo-wrap">
+      <img id="logoImg"
+        src="crelog2.png"
+        alt="Thee Fellars Logo">
+    </div>
+    <span class="brand-name">GHI Services</span>
+  </div>
+  <a href="#" class="get-quote-btn">Get Quote</a>
+</div>
+
+<!-- NAV BAR -->
+<nav class="nav-bar" id="navBar">
+  <div class="socials">
+    <a href="#" class="social-link" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="#" class="social-link" aria-label="Twitter">
+      <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+    </a>
+
+  </div>
+
+  <!-- Desktop inline nav -->
+  <ul class="desktop-nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="#">Our Work</a></li>
+    <li><a href="contact.html">Get A Quote</a></li>
+  </ul>
+
+  <!-- Mobile burger -->
+  <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- MOBILE DROPDOWN MENU — inside nav so it sticks with it on scroll -->
+  <div class="dropdown-menu" id="dropdownMenu" aria-hidden="true">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="#">Our Work</a></li>
+      <li><a href="contact.html">Get A Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+  
+
+  <section class="meg-hero" id="meg-hero" aria-label="MEG 213 BMI Scale Hero">
+  <!-- SLIDE 1 -->
+  <article class="meg-slide active" data-index="0" aria-label="Slide 1 of 3">
+    <div class="meg-slide-bg"
+      style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1400&q=80');"
+      role="img" aria-label="Professional scale weighing equipment"></div>
+    <div class="meg-slide-content">
+
+      <h1 class="meg-slide-title">
+   Find All Our work below
+      </h1>
+ 
+    </div>
+  </article>
+  </section>
+  
+
+ 
+
+  
+ 
+
+
+  
+  
+  <div class="demo">
+
+    <div class="breadcrumb-wrap">
+      <nav class="breadcrumb">
+        <a href="index.html" class="bc-item">
+          <i class="fa-solid fa-house"></i> Home
+        </a>
+        <a href="services.html" class="bc-item">Services</a>
+        <span class="bc-item active">projects</span>
+      </nav>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+
+      /* ── HEADER ── */
+      .page-header {
+        position: relative;
+        height: 340px;
+        overflow: hidden;
+      }
+      .page-header img.hero-img {
+        width: 100%; height: 100%;
+        object-fit: cover; object-position: center; display: block;
+      }
+      .page-header .overlay {
+        position: absolute; inset: 0;
+        background: rgba(0,0,0,0.52);
+        display: flex; flex-direction: column;
+        justify-content: flex-end;
+        padding: 36px 28px;
+      }
+      .page-header h1 {
+        font-size: clamp(26px, 5vw, 40px);
+        font-weight: 600; color: #fff; margin-bottom: 8px;
+      }
+      .page-header p { font-size: 15px; color: #ccc; }
+  
+      /* ── CONTAINER ── */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 50px 24px 80px;
+      }
+  
+      .section-title {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #1e5c2f;
+        margin-bottom: 28px;
+      }
+  
+      /* ── 3-COLUMN GRID ── */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 24px;
+        margin-bottom: 60px;
+      }
+  
+      @media (max-width: 960px) and (min-width: 601px) {
+        .projects-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 600px) {
+        .projects-grid { grid-template-columns: 1fr; }
+      }
+  
+      /* ── PROJECT CARD ── */
+      .project { min-width: 0; }
+  
+      .project-service {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #1e5c2f;
+        margin-bottom: 10px;
+        display: inline-block;
+        border: 1.5px solid #1e5c2f;
+        padding: 5px 10px;
+      }
+  
+      /* ── IMAGE VIEWER ── */
+      .img-viewer {
+        position: relative;
+        background: #000;
+        margin-bottom: 6px;
+      }
+      .img-viewer img.main-img {
+        width: 100%;
+        aspect-ratio: 5/4;
+        object-fit: cover;
+        display: block;
+      }
+  
+      /* nav arrows */
+      .nav-btn {
+        position: absolute;
+        top: 50%; transform: translateY(-50%);
+        width: 28px; height: 28px;
+        background: rgba(0,0,0,0.5);
+        border: none; cursor: pointer;
+        display: flex; align-items: center; justify-content: center;
+        z-index: 2;
+        transition: background 0.2s;
+      }
+      .nav-btn:hover { background: rgba(0,0,0,0.82); }
+      .nav-btn.prev { left: 7px; }
+      .nav-btn.next { right: 7px; }
+      .nav-btn svg {
+        width: 12px; height: 12px;
+        stroke: #fff; fill: none;
+        stroke-width: 2.5;
+        stroke-linecap: round; stroke-linejoin: round;
+      }
+  
+      /* counter */
+      .img-counter {
+        position: absolute;
+        bottom: 7px; right: 8px;
+        background: rgba(0,0,0,0.55);
+        color: #fff;
+        font-size: 10px; font-weight: 500;
+        padding: 2px 7px;
+      }
+  
+      /* ── THUMBNAIL STRIP ── */
+      .thumb-strip {
+        display: flex;
+        gap: 3px;
+      }
+      .thumb-strip img.thumb {
+        flex: 1; min-width: 0;
+        height: 42px;
+        object-fit: cover;
+        cursor: pointer;
+        opacity: 0.55;
+        transition: opacity 0.2s;
+        display: block;
+      }
+      .thumb-strip img.thumb:hover,
+      .thumb-strip img.thumb.active { opacity: 1; }
+  
+      .thumb-more {
+        flex: 1; min-width: 0;
+        height: 42px;
+        background: #1a1a1a;
+        display: flex; align-items: center; justify-content: center;
+        color: #fff;
+        font-size: 12px; font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .thumb-more:hover { background: #1e5c2f; }
+  
+      /* ── ACCORDION ── */
+      .accordion {
+        border-top: 1px solid #e8e8e8;
+        margin-top: 12px;
+      }
+      .accordion-item { border-bottom: 1px solid #e8e8e8; }
+      .accordion-toggle {
+        width: 100%; background: none; border: none; cursor: pointer;
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 14px 0; text-align: left; gap: 12px;
+      }
+      .accordion-toggle .name {
+        font-size: 13px; font-weight: 500; color: #1a1a1a;
+      }
+      .accordion-toggle .icon {
+        width: 24px; height: 24px;
+        border: 1.5px solid #1e5c2f;
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0; color: #1e5c2f;
+        font-size: 16px; font-weight: 400; line-height: 1;
+        transition: background 0.2s, color 0.2s, transform 0.25s;
+        user-select: none;
+      }
+      .accordion-item.open .accordion-toggle .icon {
+        background: #1e5c2f; color: #fff; transform: rotate(45deg);
+      }
+      .accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+      .accordion-item.open .accordion-body { max-height: 600px; }
+      .accordion-inner { padding: 4px 0 20px; }
+      .accordion-inner p {
+        font-size: 13px; line-height: 1.7; color: #444; margin-bottom: 12px;
+      }
+      .accordion-inner ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+      .accordion-inner ul li {
+        font-size: 13px; color: #1a1a1a;
+        display: flex; align-items: flex-start; gap: 9px; line-height: 1.5;
+      }
+      .accordion-inner ul li::before {
+        content: ''; width: 5px; height: 5px;
+        background: #1a1a1a; flex-shrink: 0; margin-top: 5px;
+      }
+  
+      /* ── CTA ── */
+      .cta {
+        padding: 36px 28px;
+        border: 2px solid #1a1a1a;
+      }
+      .cta h3 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+      .cta p  { font-size: 14px; color: #555; margin-bottom: 20px; }
+      .cta a  {
+        display: inline-block;
+        background: #1e5c2f; color: #fff;
+        font-size: 14px; font-weight: 500;
+        padding: 12px 26px; text-decoration: none;
+      }
+  
+    </style>
+
+  
+
+  
+    <div class="container">
+      <p class="section-title">Recent Work</p>
+  
+      <div class="projects-grid">
+  
+        <!--
+        TO ADD A NEW PROJECT: copy everything between
+        "START PROJECT" and "END PROJECT" and paste inside .projects-grid.
+        Update:
+          1. <img class="main-img" src="YOUR_MAIN_IMAGE"> — set directly in HTML
+          2. data-images — extra images for the strip (first should match main src)
+          3. .project-service text — the service name
+          4. .accordion-inner — description + bullets
+        Arrows, counter and +N badge are fully automatic.
+        -->
+  
+        <!-- START PROJECT -->
+        <div class="project" data-images="
+          https://picsum.photos/seed/p1a/800/600,
+          https://picsum.photos/seed/p1b/800/600,
+          https://picsum.photos/seed/p1c/800/600,
+          https://picsum.photos/seed/p1d/800/600,
+          https://picsum.photos/seed/p1e/800/600,
+          https://picsum.photos/seed/p1f/800/600,
+          https://picsum.photos/seed/p1g/800/600
+        ">
+          <p class="project-service">Harvey Thatch Tiles</p>
+  
+          <div class="img-viewer">
+            <img class="main-img" src="https://picsum.photos/seed/p1a/800/600" alt="Project image"/>
+            <button class="nav-btn prev" aria-label="Previous">
+              <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="nav-btn next" aria-label="Next">
+              <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+            </button>
+            <span class="img-counter"></span>
+          </div>
+  
+          <div class="thumb-strip"></div>
+  
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-toggle" aria-expanded="false">
+                <span class="name">More Details</span>
+                <span class="icon">+</span>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-inner">
+                  <p>Sandton residential — full thatch-to-Harvey Thatch Tile conversion completed in 6 days.</p>
+                  <ul>
+                    <li>180 m² roof area converted</li>
+                    <li>Class A fire rating achieved</li>
+                    <li>New insulation layer installed</li>
+                    <li>20-year product warranty issued</li>
+                    <li>Completed: March 2025</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END PROJECT -->
+
+
+
+
+        <div class="project" data-images="
+        https://picsum.photos/seed/p1a/800/600,
+        https://picsum.photos/seed/p1b/800/600,
+        https://picsum.photos/seed/p1c/800/600,
+        https://picsum.photos/seed/p1d/800/600,
+        https://picsum.photos/seed/p1e/800/600,
+        https://picsum.photos/seed/p1f/800/600,
+        https://picsum.photos/seed/p1g/800/600
+      ">
+        <p class="project-service">Harvey Thatch Tiles</p>
+
+        <div class="img-viewer">
+          <img class="main-img" src="https://picsum.photos/seed/p1a/800/600" alt="Project image"/>
+          <button class="nav-btn prev" aria-label="Previous">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="nav-btn next" aria-label="Next">
+            <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+          <span class="img-counter"></span>
+        </div>
+
+        <div class="thumb-strip"></div>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">
+              <span class="name">More Details</span>
+              <span class="icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-inner">
+                <p>Sandton residential — full thatch-to-Harvey Thatch Tile conversion completed in 6 days.</p>
+                <ul>
+                  <li>180 m² roof area converted</li>
+                  <li>Class A fire rating achieved</li>
+                  <li>New insulation layer installed</li>
+                  <li>20-year product warranty issued</li>
+                  <li>Completed: March 2025</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      </div><!-- end .projects-grid -->
+  
+      <div class="cta">
+        <h3>Want to see your project here?</h3>
+        <p>We work across Gauteng. Get in touch for a free consultation and quote.</p>
+        <a href="contact.html">Get a Free Quote</a>
+      </div>
+  
+    </div>
+  
+    <script>
+      var THUMB_SLOTS = 4;
+  
+      document.querySelectorAll('.project').forEach(function(proj) {
+        var images = (proj.getAttribute('data-images') || '')
+          .split(',').map(function(s){ return s.trim(); }).filter(Boolean);
+  
+        if (!images.length) return;
+  
+        var mainImg = proj.querySelector('.main-img');
+        var counter = proj.querySelector('.img-counter');
+        var strip   = proj.querySelector('.thumb-strip');
+        var btnPrev = proj.querySelector('.nav-btn.prev');
+        var btnNext = proj.querySelector('.nav-btn.next');
+        var current = 0;
+  
+        function show(index) {
+          current = (index + images.length) % images.length;
+          mainImg.src = images[current];
+          counter.textContent = (current + 1) + ' / ' + images.length;
+          strip.querySelectorAll('img.thumb').forEach(function(t, i){
+            t.classList.toggle('active', i === current);
+          });
+        }
+  
+        btnPrev.addEventListener('click', function(){ show(current - 1); });
+        btnNext.addEventListener('click', function(){ show(current + 1); });
+  
+        var needsMore    = images.length > THUMB_SLOTS;
+        var visibleCount = needsMore ? THUMB_SLOTS - 1 : images.length;
+        var hiddenCount  = images.length - visibleCount;
+  
+        images.slice(0, visibleCount).forEach(function(src, i) {
+          var img = document.createElement('img');
+          img.className = 'thumb' + (i === 0 ? ' active' : '');
+          img.src = src;
+          img.alt = 'Thumbnail ' + (i + 1);
+          img.addEventListener('click', (function(idx){ return function(){ show(idx); }; })(i));
+          strip.appendChild(img);
+        });
+  
+        if (hiddenCount > 0) {
+          var more = document.createElement('div');
+          more.className = 'thumb-more';
+          more.textContent = '+' + hiddenCount;
+          var hi = 0;
+          more.addEventListener('click', function(){
+            show(visibleCount + hi);
+            hi = (hi + 1) % hiddenCount;
+            var left = hiddenCount - hi;
+            more.textContent = '+' + (left > 0 ? left : hiddenCount);
+          });
+          strip.appendChild(more);
+        }
+  
+        // init counter only (main img already set in HTML)
+        counter.textContent = '1 / ' + images.length;
+      });
+  
+      // Accordion
+      document.querySelectorAll('.accordion-toggle').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var item   = this.closest('.accordion-item');
+          var isOpen = item.classList.contains('open');
+          this.closest('.accordion').querySelectorAll('.accordion-item').forEach(function(i){
+            i.classList.remove('open');
+            i.querySelector('.accordion-toggle').setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="scripts.js"></script>
+  
+  </body>
+  </html>
