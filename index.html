@@ -157,9 +157,9 @@
   }
 
   .meg-slide-rule {
-    width: 36px;
-    height: 2px;
-    background: #103305;
+    width: 13px;
+    height: 10px;
+    background: #ffffff;
     flex-shrink: 0;
   }
 
@@ -168,7 +168,7 @@
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color:rgb(19, 69, 41);
+    color:rgb(219, 219, 219);
   }
 
   /* Headline */
@@ -464,7 +464,7 @@ function goTo(index) {
   progress.style.transition = 'none';
   progress.style.width = '0%';
   void progress.offsetWidth; // force reflow
-  progress.style.transition = 'width 7s linear';
+  progress.style.transition = 'width 10s linear';
   progress.style.width = ((current + 1) / TOTAL * 100) + '%';
 }
 
@@ -475,7 +475,7 @@ function changeSlide(dir) {
 }
 
 function startAuto() {
-  autoTimer = setInterval(() => goTo(current + 1), 5000);
+  autoTimer = setInterval(() => goTo(current + 1), 13000);
 }
 
 document.getElementById('prevBtn').addEventListener('click', () => changeSlide(-1));
