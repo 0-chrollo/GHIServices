@@ -681,7 +681,261 @@ startAuto();
 <section class="about">
   <div class="about-inner">
 
+    
+
     <div class="about-left">
+
+      <!-- ============================================
+     GHI SERVICES — CERTIFICATE SECTION
+     Paste this section into your page where needed.
+     Replace "certificate.pdf" with your actual PDF filename/path.
+============================================ -->
+
+<section class="ghi-cert-section">
+
+  <div class="ghi-cert-inner">
+
+      <p class="ghi-cert-label">Approved Installer</p>
+ 
+
+      <button class="ghi-cert-btn" onclick="ghiOpenCert()">
+          <svg class="ghi-cert-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="12" y1="18" x2="12" y2="12"/>
+              <polyline points="9 15 12 18 15 15"/>
+          </svg>
+          View Certificate
+      </button>
+
+  </div>
+
+  <!-- PDF OVERLAY MODAL -->
+  <div class="ghi-cert-overlay" id="ghiCertOverlay" onclick="ghiCloseCert(event)">
+      <div class="ghi-cert-modal">
+
+          <div class="ghi-cert-modal-header">
+              <span class="ghi-cert-modal-title">GHI Services — Rhino Thatch Tile Accreditation</span>
+              <button class="ghi-cert-close" onclick="ghiCloseCert()" aria-label="Close certificate">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="6" x2="6" y2="18"/>
+                      <line x1="6" y1="6" x2="18" y2="18"/>
+                  </svg>
+              </button>
+          </div>
+
+          <div class="ghi-cert-viewer">
+              <iframe
+                  id="ghiCertFrame"
+                  src=""
+                  title="GHI Services Certificate of Compliance"
+                  frameborder="0"
+                  allowfullscreen>
+              </iframe>
+          </div>
+
+      </div>
+  </div>
+
+</section>
+
+
+<style>
+/* ---- CERTIFICATE SECTION ---- */
+.ghi-cert-section {
+  background: #fff;
+
+  text-align: center;
+}
+
+.ghi-cert-inner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.ghi-cert-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0e4926;
+  margin: 0 0 14px;
+}
+
+.ghi-cert-heading {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 18px;
+  line-height: 1.15;
+}
+
+.ghi-cert-sub {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 40px;
+}
+
+/* ---- BUTTON ---- */
+.ghi-cert-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #0e4926;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 9px 19px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  text-decoration: none;
+}
+
+.ghi-cert-btn:hover {
+  background: #12643500;
+  background: #126435;
+  transform: translateY(-2px);
+}
+
+.ghi-cert-btn:active {
+  transform: translateY(0);
+}
+
+.ghi-cert-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ---- OVERLAY ---- */
+.ghi-cert-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.ghi-cert-overlay.active {
+  display: flex;
+}
+
+/* ---- MODAL ---- */
+.ghi-cert-modal {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 96vw;
+  max-width: 1200px;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+
+.ghi-cert-modal-header {
+  background: #0e4926;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.ghi-cert-modal-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.ghi-cert-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+
+.ghi-cert-close:hover {
+  opacity: 1;
+}
+
+.ghi-cert-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---- IFRAME VIEWER ---- */
+.ghi-cert-viewer {
+  flex: 1;
+  overflow: hidden;
+}
+
+.ghi-cert-viewer iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+/* ---- MOBILE ---- */
+@media (max-width: 600px) {
+  .ghi-cert-section {
+      padding: 60px 20px;
+  }
+  .ghi-cert-modal {
+      height: 95vh;
+  }
+  .ghi-cert-modal-title {
+      font-size: 12px;
+  }
+}
+</style>
+
+
+<script>
+/* ---- CHANGE THIS to your actual PDF file path ---- */
+var GHI_CERT_PDF = "SKM_C55826042014250.pdf";
+
+function ghiOpenCert() {
+  var overlay = document.getElementById("ghiCertOverlay");
+  var frame = document.getElementById("ghiCertFrame");
+  frame.src = GHI_CERT_PDF;
+  overlay.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function ghiCloseCert(e) {
+  if (e && e.target !== document.getElementById("ghiCertOverlay")) return;
+  var overlay = document.getElementById("ghiCertOverlay");
+  var frame = document.getElementById("ghiCertFrame");
+  overlay.classList.remove("active");
+  frame.src = "";
+  document.body.style.overflow = "";
+}
+
+/* Close with Escape key */
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") ghiCloseCert();
+});
+</script>
+
+
+<br>
+
       <h2>Gauteng's <span>Thatch & Roofing</span> Specialists</h2>
       <p>
         GHI Services delivers expert roofing solutions across all areas of Gauteng — from new thatch constructions to full roof conversions, fire protection systems, and lightning conductor installations. Every completed contract is filed in our database and backed by our after-sales commitment and 3-year extended guarantee option.
