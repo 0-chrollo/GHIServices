@@ -96,7 +96,12 @@
 <link rel="stylesheet" href="styles.css">
 
 </head>
-<body>
+
+
+  <body style="visibility: hidden;">
+  <!-- all your normal site content -->
+
+  
 
 <!-- TOP BAR -->
 
@@ -1695,7 +1700,11 @@ startAuto();
 
 
 
-
+<script>
+    setTimeout(() => {
+      document.body.style.visibility = 'visible';
+    }, 15000); // 15000ms = 15 seconds
+  </script>
 
 
 
