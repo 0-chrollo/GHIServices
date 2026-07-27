@@ -65,7 +65,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lato:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="core.css">
 </head>
-<body>
+
+
+  
+<body style="visibility: hidden;">
 
 <!-- TOP BAR -->
 <div class="top-bar">
@@ -552,6 +555,14 @@
   <!-- /footer__bottom -->
 
 </footer>
+
+
+<script>
+    setTimeout(() => {
+      document.body.style.visibility = 'visible';
+    }, 16000); // 15000ms = 15 seconds
+</script>
+  
 
 <script src="scripts.js"></script>
 </body>
