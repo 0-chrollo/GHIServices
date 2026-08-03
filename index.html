@@ -98,7 +98,7 @@
 </head>
 
 
-  <body style="visibility: hidden;">
+  
   <!-- all your normal site content -->
 
   
@@ -1213,16 +1213,7 @@ startAuto();
 </section>
 </section>
 
-<script>
-  document.querySelectorAll('.video-overlay').forEach(overlay => {
-    overlay.addEventListener('click', () => {
-      const video = overlay.previousElementSibling;
-      overlay.classList.add('hidden');
-      video.controls = true;
-      video.play();
-    });
-  });
-</script>
+
 
 
 
