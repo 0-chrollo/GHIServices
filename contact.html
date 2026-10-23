@@ -427,12 +427,16 @@
             <!-- CONTACT FORM -->
             <div class="contact-form">
               <h2>Get in touch</h2>
-              <form action="https://formsubmit.co/clintmaxct@gmail,com" method="POST">
+          
+              <p id="form-success" style="display:none; color:green; margin-bottom:16px;">
+                  Thank you! Your message has been sent. We'll be in touch shortly.
+              </p>
+          
+              <form action="https://formsubmit.co/clintmaxct@gmail.com" method="POST">
           
                   <!-- FormSubmit Config -->
                   <input type="hidden" name="_subject" value="New Enquiry from Website">
-                  <input type="hidden" name="_next" value="https://www.clintmax.co.za/contact.html">
-
+                  <input type="hidden" name="_next" value="https://www.clintmax.co.za/contact.html?sent=true">
                   <input type="hidden" name="_captcha" value="false">
                   <input type="hidden" name="_template" value="table">
                   <!-- Spam honeypot: leave hidden and empty -->
