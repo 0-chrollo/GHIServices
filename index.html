@@ -96,7 +96,12 @@
 <link rel="stylesheet" href="styles.css">
 
 </head>
-<body>
+
+
+  
+  <!-- all your normal site content -->
+
+  
 
 <!-- TOP BAR -->
 
@@ -1208,16 +1213,7 @@ startAuto();
 </section>
 </section>
 
-<script>
-  document.querySelectorAll('.video-overlay').forEach(overlay => {
-    overlay.addEventListener('click', () => {
-      const video = overlay.previousElementSibling;
-      overlay.classList.add('hidden');
-      video.controls = true;
-      video.play();
-    });
-  });
-</script>
+
 
 
 
@@ -1695,7 +1691,11 @@ startAuto();
 
 
 
-
+<script>
+    setTimeout(() => {
+      document.body.style.visibility = 'visible';
+    }, 15000); // 15000ms = 15 seconds
+  </script>
 
 
 
